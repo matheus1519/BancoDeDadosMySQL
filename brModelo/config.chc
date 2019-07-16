@@ -1,0 +1,10 @@
+#Config
+#Tue Jul 09 22:59:05 BRT 2019
+cfg.tipodefault=1
+cfg.mostrardimensoesaomover=false
+cfg.location.y=-8
+cfg.location.x=-8
+cfg.mostrarids=false
+cfg.location.salvar=false
+cfg.recentes=C\:\\Users\\1519m\\Desktop\\Matheus\\Logico.brM3;C\:\\Users\\1519m\\Desktop\\Matheus\\Conceitual.brM3;C\:\\Users\\1519m\\Desktop\\Matheus\\LogicoSAA.brM3;C\:\\Users\\1519m\\Desktop\\Matheus\\SistemaAdministrativoAntifome.brM3;C\:\\Users\\1519m\\Desktop\\SistemaAdministrativoAntifome.brM3;C\:\\Users\\Aluno\\Desktop\\Matheus\\SistemaAdministrativoAntifome.brM3;C\:\\Users\\Aluno\\Desktop\\Matheus\\Conceitual - Posto de Saude.brM3;C\:\\Users\\Aluno\\Desktop\\Matheus\\Conceitual - FIRMA.brM3;C\:\\Users\\Aluno\\Desktop\\Matheus\\Conceitual - DETRAN.brM3;C\:\\Users\\Aluno\\Desktop\\Matheus\\Conceitual - Academia.brM3
+cfg.mostrartooltips=true

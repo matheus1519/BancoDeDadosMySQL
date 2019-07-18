@@ -47,7 +47,7 @@ values ('Lucas', '2002-01-25', '02158763152', 'luquinha@gmail.com', '22955455415
 insert into funcionario(nome,funcao,salario,data_nascimento,cpf,email,celular,id_endereco,id_login)
 values ('Carlos', 'Atendente', 3505, '1972-10-18', '15725152154', 'carlos@gmail.com', '22987725422', 4,6);
 insert into funcionario(nome,funcao,salario,data_nascimento,cpf,email,celular,id_endereco,id_login)
-values ('Mara', 'Atendente', 3001500.5, '1972-10-18', '15725152154', 'carlos@gmail.com', '22987725422', 5,7);
+values ('Mara', 'Atendente', 3500.5, '1972-10-18', '15725152154', 'carlos@gmail.com', '22987725422', 5,7);
 
 /* Empresa */
 insert into empresa(razao_social,nome_fantasia,cnpj,email,telefone,id_endereco,id_login)
@@ -78,5 +78,11 @@ insert into compra(data,hora,status,entrega,valor_total,id_cliente,id_produto)
 values ('2019-6-15', '21:21:01', 'finalizada','nao', 56.2,1,1);
 insert into compra(data,hora,status,entrega,valor_total,id_cliente,id_produto)
 values ('2019-6-15', '21:21:01', 'finalizada','nao', 56.2,1,2);
+
+/* Problema */
+insert into problema(assunto, descricao, situacao, id_funcionario, id_compra)
+values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Resolvido',1, 1);
+insert into problema(assunto, descricao, situacao, id_funcionario, id_compra)
+values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Resolvido',2, 2);
 
 

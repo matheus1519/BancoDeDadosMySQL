@@ -1,3 +1,4 @@
+use antifome;
 /* Endereço */ 
 insert into endereco(rua,numero,cidade,bairro,estado,cep)
 values ('Avenida nao te interessa', '500', 'Campos dos Goytacazes', 'Parque Aurora', 'RJ', '28083200');
@@ -57,6 +58,13 @@ insert into empresa(razao_social,nome_fantasia,cnpj,email,telefone,id_endereco,i
 values ('Salgados para todos', 'Salgado do Povo', '25469805423152', 'salgadando@gmail.com', '2227282116
 ', 5,9);
 
+/* Compra */
+insert into compra(data,hora,status,entrega,valor_total,id_cliente)
+values ('2019-6-15', '21:21:01', 'finalizada','nao', 56.2,1);
+insert into compra(data,hora,status,entrega,valor_total,id_cliente)
+values ('2019-6-01', '10:54:01', 'andamento','nao', 56.2,1);
+
+
 /* Produto */
 insert into produto(nome,descricao,valor,categoria,id_empresa) 
 values ('Chocolate', 'Barra de Chocolate 500g', 8.5, 'Doce', 1);
@@ -67,22 +75,23 @@ values ('Enroladinho', 'Presunto e Queijo', 3.5, 'Salgado', 2);
 insert into produto(nome,descricao,valor,categoria,id_empresa) 
 values ('Enroladinho', 'Frengo', 3.5, 'Salgado', 2);
 
+/* Mapeando compra e produtos */
+insert into compra_produto(id_compra,id_produto)
+values (1,1);
+insert into compra_produto(id_compra,id_produto)
+values (1,2);
+
 /* Mensalidade */
 insert into mensalidade(valor,data_paga,data_referente,hora_paga,id_empresa)
 values (50.5, '2019-7-2', '2019-6-15', '21:21:01',1);
 insert into mensalidade(valor,data_paga,data_referente,hora_paga,id_empresa)
 values (50.5, '2019-7-2', '2019-6-15', '21:21:01',2);
 
-/* Compra */
-insert into compra(data,hora,status,entrega,valor_total,id_cliente,id_produto)
-values ('2019-6-15', '21:21:01', 'finalizada','nao', 56.2,1,1);
-insert into compra(data,hora,status,entrega,valor_total,id_cliente,id_produto)
-values ('2019-6-15', '21:21:01', 'finalizada','nao', 56.2,1,2);
 
 /* Problema */
 insert into problema(assunto, descricao, situacao, id_funcionario, id_compra)
 values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Resolvido',1, 1);
 insert into problema(assunto, descricao, situacao, id_funcionario, id_compra)
-values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Resolvido',2, 2);
+values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Não esolvido',2, 2);
 
 

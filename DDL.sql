@@ -102,6 +102,14 @@ CREATE TABLE compra (
     FOREIGN KEY (id_produto)REFERENCES produto (id_produto) on delete set null on update cascade
 );
 
+create table compra_produto(
+	id_compra_produto int not null auto_increment primary key,
+	id_compra int,
+	id_produto int,
+	FOREIGN KEY (id_compra) REFERENCES compra(id_compra) on delete cascade on update cascade,
+	FOREIGN KEY (id_produto) REFERENCES produto(id_produto) on delete cascade on update cascade
+);
+
 CREATE TABLE problema (
     id_problema int not null auto_increment PRIMARY KEY,
     assunto varchar(50) not null,

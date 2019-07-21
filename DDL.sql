@@ -97,9 +97,7 @@ CREATE TABLE compra (
     entrega varchar(3) not null,
     valor_total float(6,2) not null,
     id_cliente int,
-    id_produto int,
-    FOREIGN KEY (id_cliente)REFERENCES cliente (id_cliente) on delete set null on update cascade,
-    FOREIGN KEY (id_produto)REFERENCES produto (id_produto) on delete set null on update cascade
+    FOREIGN KEY (id_cliente)REFERENCES cliente (id_cliente) on delete set null on update cascade
 );
 
 create table compra_produto(

@@ -21,3 +21,29 @@ update funcionario
 		else salario * 1.1 
 	end
 ;
+
+/* Função */
+/*
+	Retornar a quantidade de empresas cadastradas em um determinado mês (Intervalo restrito em 1 ano)
+*/
+create function empresas_cadastradas(mes varchar(2)) returns integer 
+begin
+    declare quantidade integer;
+    declare ano varchar(4);
+    
+    if(mes > date_format(now(),'%m')) then
+		set ano = date_format(date_sub(now(), interval 1 year),'%Y');
+	else
+		set ano = date_format(now(),'%Y');
+	end if;
+    
+    select count(*) into quantidade from empresa where data_cadastrado like (concat(ano,'-',mes,'%'));
+    
+    return quantidade;
+end;
+
+/* Procedimento */
+/*
+	Mostrar o ID do cliente que mais acessou o sistema no mês atual
+*/
+

@@ -44,6 +44,28 @@ end;
 
 /* Procedimento */
 /*
-	Mostrar o ID do cliente que mais acessou o sistema no mês atual
+	Quando a aplicação é fechada, o status de todos as compras tem que ser definido para finalizado
+	e mostrar na tela quantas compras ficaram com status diferente de finalizado.
 */
+create procedure finalizar_todos()
+begin
+    declare tamanho integer;
+    declare i integer;
+    declare quantidade integer;
+    declare statu varchar(20);
+	set quantidade = 0;
+    set i = 0;
+   
+    select max(id_compra) into tamanho from compra;
+    while i <= tamanho do
+		select status into statu from compra where id_compra = i;
+		if(statu <> 'Finalizada' ) then
+			set quantidade = quantidade + 1;
+        end if;
+        set i = i + 1;
+    end while;
+    select concat('A quantidade de compras diferente de Finalizada: ', quantidade);
+	update compra set status = 'Finalizada';
+end; 
 
+/* Trigger */

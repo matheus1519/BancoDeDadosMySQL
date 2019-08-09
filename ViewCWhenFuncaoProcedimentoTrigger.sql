@@ -69,3 +69,12 @@ begin
 end; 
 
 /* Trigger */
+/*
+	Toda vez que o funcionario resolve um problema é adicionado 20 reais ao seu salario.
+*/
+create trigger adiciona_funcionario after insert
+on problema
+for each row
+begin
+	update funcionario set salario = salario + 20 where id_funcionario = new.id_funcionario;
+end

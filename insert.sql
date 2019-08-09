@@ -77,23 +77,35 @@ values ('Enroladinho', 'Frengo', 3.5, 'Salgado', 2);
 
 /* Mapeando compra e produtos */
 insert into compra_produto(id_compra,id_produto)
-values (1,1);
+	values (1,1);
 insert into compra_produto(id_compra,id_produto)
-values (1,2);
+	values (1,2);
 insert into compra_produto(id_compra,id_produto)
-values (2,3);
+	values (2,3);
 insert into compra_produto(id_compra,id_produto)
-values (2,4);
+	values (2,4);
 
 /* Mensalidade */
 insert into mensalidade(valor,data_paga,data_referente,hora_paga,id_empresa)
-values (50.5, '2019-7-2', '2019-6-15', '21:21:01',1);
+	values (50.5, '2019-7-2', '2019-6-15', '21:21:01',1);
 insert into mensalidade(valor,data_paga,data_referente,hora_paga,id_empresa)
-values (50.5, '2019-7-2', '2019-6-15', '21:21:01',2);
+	values (50.5, '2019-7-2', '2019-6-15', '21:21:01',2);
 
 
 /* Problema */
 insert into problema(assunto, descricao, situacao, id_funcionario, id_compra)
-values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Resolvido',1, 1);
+	values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Resolvido',1, 1);
 insert into problema(assunto, descricao, situacao, id_funcionario, id_compra)
-values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Não esolvido',2, 2);
+	values ('Compra Invalida', 'Minha compra foi nagada e invalida', 'Não esolvido',2, 2);
+
+/* Avaliacao */
+insert into avaliacao (classificacao, comentario, id_cliente, id_compra)
+	values(5, 'Chegou Rápido, adorei',  1,1);
+insert into avaliacao (classificacao, comentario, id_cliente, id_compra)
+	values(1, 'Demorou muito, Odiei',  2,2);
+
+/* Acesso */
+insert into acesso (id_login)
+	values(1);
+insert into acesso (id_login)
+	values(2);
